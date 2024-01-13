@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Lilita+One&family=Lora:ital,wght@0,400;1,600&family=Poppins&family=Roboto&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Montserrat;
+    text-align: center;
+}
+
+.app{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .main{
+        padding: 4rem;
+        border: 1px solid black;
+        border-radius: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+        box-shadow: -1.9rem 1.3rem 6.2rem .7rem rgba(251, 24, 78, 0.47),
+        1.9rem -1.3rem 6.2rem .7rem rgba(0, 85, 255, 0.47);
+
+        h1{
+            font-size: 2rem;
+        }
+
+        .calculator{
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            padding-inline: 1rem;;
+
+            input{
+                max-width: 16rem;
+                padding: .5rem .8rem;
+                border-radius: 0;
+                font-weight: bold;
+                font-size: 1.1rem;
+                border: 2px solid black;
+                text-align: left;
+                &::placeholder{
+                    font-weight: bold;
+                    font-size: 1.1rem;
+                    color: black;
+                }
+            }
+
+            .btns{
+                display: flex;
+                justify-content: space-between;
+                button{
+                    height: 3rem;
+                    width: 3rem;
+                    padding: .5rem;
+                    font-weight: 900;
+                    font-size: 1.1rem;
+                    cursor: pointer;
+                    border-radius: 0;
+                    border: none;
+                    background-color: black;
+                    color: white;
+                    &:hover{
+                        opacity: 0.8;
+                    }
+                }
+            }
+
+        }
+
+        .msg, .result{
+            font-weight: bold;
+            font-size: 1.1rem;
+            max-width: 17rem;
+        }
+        .Success{
+            color: green;
+        }
+        .Error{
+            color: red;
+        }
+    }
+}
+
+
+@media (max-width: 550px){
+    html{
+        font-size: 11px;
+    }
+    .app{
+        .main{
+            margin-inline: 1rem;
+            padding: 3rem;
+        }
+    }
+}
